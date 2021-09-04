@@ -11,13 +11,13 @@ public class CustomerMailApplication {
     public void getCustomerTypeFromUser(String customerType) {
         switch(customerType) {
             case "Regular":
-                customer = new RegularCustomer();
+                customer = CustomerFactory.createCustomer("Regular");
                 break;
             case "Mountain":
-                customer = new MountainCustomer();
+                customer = CustomerFactory.createCustomer("Mountain");
                 break;
             case "Delinquent":
-                customer = new DelinquentCustomer();
+                customer = CustomerFactory.createCustomer("Delinquent");
                 break;
         }
     }
